@@ -1,0 +1,456 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+}
+
+/* Header Styling */
+header {
+    background: rgb(138,43,226);
+    background: linear-gradient(90deg, rgba(138,43,226,1) 14%, rgba(255,20,147,1) 58%, rgba(30,144,255,1) 100%);
+    color: #fff;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo a {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    color: #ff6347;
+    font-weight:bold;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 5%;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .logo a {
+        display: inline-block;
+        width: 100%;
+        height: auto;
+        text-align: center;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .nav-links li {
+        width: 100%;
+    }
+
+    .nav-links li a {
+        display: block;
+        padding: 10px;
+        background: linear-gradient(90deg, rgba(30,144,255,1) 14%, rgba(138,43,226,1) 30%, rgba(255,20,147,1) 100%);
+        border-radius: 5px;
+        text-align: center;
+    }
+
+    .nav-links li a:hover {
+        background-color: #555;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* home.html CSS */
+
+/* .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: auto;
+    height: 100vh;
+    background: linear-gradient(90deg, rgba(30,144,255,1) 14%, rgba(138,43,226,1) 58%, rgba(255,20,147,1) 100%);
+    text-align: center; 
+    padding: 20%;
+}
+
+.home_hero img {
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3); 
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 50% 0;
+}
+
+.container button {
+    position: inherit;
+    display: inline-block;
+    padding: 2rem 4rem;
+    border-radius: 2rem;
+    margin-top: 5%;
+    color: black;
+    background-color: #F7CE00;
+    font-size: xx-large;
+    font-weight: bolder;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.container button:hover {
+    background-color: #ffb302;
+}
+
+
+@media (max-width: 768px) {
+    .container img {
+        height: 40vh;
+        }
+} */
+
+
+
+
+
+
+
+
+
+/* play.html */
+
+
+/* .hero-container .message {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2.5rem;
+    font-weight: bolder;
+    text-align: center;
+    color: black;
+}
+
+.hero-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    background: linear-gradient(90deg, rgba(30,144,255,1) 14%, rgba(138,43,226,1) 58%, rgba(255,20,147,1) 100%);
+    width: 100%;
+    height: 100vh;
+    padding: 0 10%;
+    position: relative;
+}
+
+.image-1, .image-2 {
+    width: 40%;
+    height: 50vh;
+    overflow: hidden;
+}
+
+.image-1 img, .image-2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.buttons-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.game-button {
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.game-button.higher {
+    background-color: #4CAF50;
+}
+
+.game-button.lower {
+    background-color: #FF6F61; 
+}
+
+.game-button.higher:hover {
+    background-color: #45a049; 
+}
+
+.game-button.lower:hover {
+    background-color: #e53935; 
+}
+
+.game-button:hover {
+    opacity: 0.9;
+}
+
+.score-class p {
+    display: flex;
+    flex-direction: column;
+}
+
+.score-class {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translateX(-170%);
+    font-size: 2.5rem;
+    font-weight: bolder;
+    text-align: center;
+    color: black;
+    margin-top: 10px;
+}
+
+
+@media (max-width: 768px) {
+    .hero-container {
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 5%;
+    }
+
+    .image-1, .image-2 {
+        width: 80%;
+        height: 30vh;
+    }
+
+    .buttons-container {
+        flex-direction: row;
+        gap: 10px;
+        margin: 20px 0;
+    }
+
+    .game-button {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+
+    .hero-container .message {
+        font-size: 1.2rem;
+        top: 1%;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-container .message {
+        font-size: 1rem;
+    }
+
+    .game-button {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+} */
+
+
+
+
+
+
+
+
+/* About.html CSS */
+
+/* .about-container {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(90deg, rgba(30,144,255,1) 14%, rgba(138,43,226,1) 58%, rgba(255,20,147,1) 100%);
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+}
+.about-container {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+    text-align: center;
+}
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #007bff;
+}
+p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+a {
+    color: #67b0ff;
+    text-decoration: none;
+    font-weight: bold;
+}
+a:hover {
+    text-decoration: underline;
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Footer Styling */
+.footer {
+    /* background-color: #333; */
+    background: rgb(138,43,226);
+    background: linear-gradient(90deg, rgba(138,43,226,1) 14%, rgba(255,20,147,1) 58%, rgba(30,144,255,1) 100%);
+    color: #fff;
+    padding: 40px 20px;
+    margin-top: auto; /* Pushes footer to the bottom if the page content is short */
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    gap: 20px; /* Space between sections */
+}
+
+.footer-section {
+    flex: 1 1 30%; /* Each section takes up 30% of the width, but can grow/shrink */
+    min-width: 250px; /* Minimum width for each section */
+    margin-bottom: 20px;
+}
+
+.footer-section h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: white; /* Tomato color for headings */
+}
+
+.footer-section p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.footer-section.links ul,
+.footer-section.social ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section.links ul li,
+.footer-section.social ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section.links ul li a,
+.footer-section.social ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.footer-section.links ul li a:hover,
+.footer-section.social ul li a:hover {
+    color: #ff6347; /* Tomato color for hover effect */
+}
+
+.footer-section.links ul li a i {
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+.footer-section.social ul li a i {
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #444;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+/* Responsive Design for Footer */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column; /* Stack sections vertically on smaller screens */
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-section {
+        min-width: 100%; /* Full width for each section on smaller screens */
+    }
+}

@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block styles %}  
+    {% comment %} <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> {% endcomment %}
+    <link rel="stylesheet" href="{% static "gameApp/home.css" %}">
+{% endblock styles %}
+
+{% block title %}Home Page{% endblock title %}
+
+{% block content %}
+
+
+<div class="container">
+    <div class="home_hero">
+        <img src="{% static 'globalimages/hero_image_02.webp' %}">
+        <a href="{% url 'Play' %}">
+            <button type="submit"> Play</button>
+        </a>
+    </div>
+</div>
+{% endblock content %}

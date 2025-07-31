@@ -1,0 +1,91 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Play Game{% endblock title %}
+
+{% block styles %}  
+    <link rel="stylesheet" href="{% static "gameApp/play.css" %}">
+{% endblock styles %}
+
+{% block content %}
+<div class="hero-container">
+    <div class="message">
+        <p>Who has more follower?</p>
+        <p>Type "A" for {{account_a_name}} or "B" for {{account_b_name}}</p>
+    </div>
+
+    <div class="main-content">
+        <div class="image-with-details">
+            <div class="image-1">
+                <img src="{{account_a_image}}" alt="{{account_a_name}}">
+            </div>
+            <div class="celeb-1">
+                <p>{{account_a_name}},</p>
+                <p>a {{account_a_description}},</p>
+                <p>from {{account_a_from}}.</p>
+                <p id="follower-count1">{{account_a_follower}} Millions followers</p>
+            </div>
+        </div>
+
+        <div class="buttons-container">
+            <form method="get" id="form-container">
+                <input class="input-field" type="text" name="user_choice" placeholder="Type 'A' or 'B'" autofocus required>
+                <button class="game-button higher" type="submit">Submit</button>
+            </form>
+            <div class="restart-container" id="restart-button" style="display: none;">
+                <a href="{% url 'Play' %}?restart=true" class="game-button restart">Play Again</a>
+            </div>
+        </div>
+
+        <div class="image-with-details">
+            <div class="image-2">
+                <img src="{{account_b_image}}" alt="{{account_b_name}}">
+            </div>
+            <div class="celeb-2">
+                <p>{{account_b_name}},</p>
+                <p>a {{account_b_description}},</p>
+                <p>from {{account_b_from}}.</p>
+                <p id="follower-count2">{{account_b_follower}} Millions followers</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="score-class" id="score-id">
+        <p>{{message}}</p>
+    </div>
+</div>
+
+{% if "Sorry, that's wrong. Final Score" in message %}
+    <script>
+        window.onload = function(){
+            document.getElementById("form-container").style.display = "none";
+            document.getElementById("restart-button").style.display = "block";
+            document.getElementById("follower-count1").style.color = "#cc0000";
+            document.getElementById("follower-count2").style.color = "#cc0000";
+            document.getElementById("restart-button").style.marginTop = "-70%";
+            document.getElementById("score-id").style.color = "white";
+            document.getElementById("score-id").style.fontSize = "3.5rem";
+        }
+    </script>
+{% endif %}
+
+{% if "You're right! Current Score" in message %}
+    <script>
+        window.onload = function(){
+            document.getElementById("restart-button").style.display = "none";
+            document.getElementById("follower-count1").style.display = "none";
+            document.getElementById("follower-count2").style.display = "none";
+            document.getElementById("score-id").style.color = "green";
+            document.getElementById("score-id").style.fontSize = "3rem";
+        }
+    </script>
+{% endif %}
+
+{% if message == False %}
+    <script>
+        window.onload = function(){
+            document.getElementById("score-id").style.display = "none";
+        }
+    </script>
+{% endif %}
+{% endblock content %}

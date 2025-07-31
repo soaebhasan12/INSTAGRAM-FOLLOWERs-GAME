@@ -1,0 +1,46 @@
+/* home.html CSS */
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: auto;
+    height: 100vh;
+    background: linear-gradient(90deg, rgba(30,144,255,1) 14%, rgba(138,43,226,1) 58%, rgba(255,20,147,1) 100%);
+    text-align: center; 
+    padding: 20%;
+}
+
+.home_hero img {
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3); 
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 50% 0;
+}
+
+.container button {
+    position: inherit;
+    display: inline-block;
+    padding: 2rem 4rem;
+    border-radius: 2rem;
+    margin-top: 5%;
+    color: black;
+    background-color: #F7CE00;
+    font-size: xx-large;
+    font-weight: bolder;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.container button:hover {
+    background-color: #ffb302;
+}
+
+
+@media (max-width: 768px) {
+    .container img {
+        height: 40vh;
+        }
+}

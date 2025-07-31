@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}About Page{% endblock title %}
+
+{% block styles %}  
+    {% comment %} <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> {% endcomment %}
+    <link rel="stylesheet" href="{% static "gameApp/about.css" %}">
+{% endblock styles %}
+
+
+{% block content %}
+
+<div class="about-container">
+        <h1>About Higher-Lower Game</h1>
+        <p>
+            Higher-Lower is a fun and addictive guessing game where you test your intuition and knowledge. The game presents you with two options, and your goal is to guess which one is higher or lower based on the given criteria. Whether it's comparing follower counts, popularity, or other metrics, Higher-Lower challenges your ability to make quick and accurate decisions.
+        </p>
+        <p>
+            This game is perfect for anyone who enjoys trivia, statistics, or simply wants to have a good time. It's easy to play but hard to master, making it a great way to pass the time while sharpening your guessing skills.
+        </p>
+        <p>
+            Ready to test your intuition? <a href="{% url 'Home' %}">Play the Higher-Lower game now!</a>
+        </p>
+</div>
+{% endblock content %}

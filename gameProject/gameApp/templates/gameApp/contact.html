@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Contact Us - Higher-Lower Game{% endblock title %}
+
+{% block styles %}
+    {% comment %} <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> {% endcomment %}
+    <link rel="stylesheet" href="{% static 'gameApp/contact.css' %}">
+{% endblock styles %}
+
+{% block content %}
+<div class="main-container">
+<div class="container">
+    <h1>Contact Us</h1>
+    <p>Have questions or feedback about the Higher-Lower game? We'd love to hear from you!</p>
+    <form action="#" method="POST">
+        {% csrf_token %}
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+    <p>Or go back to <a href="{% url 'Home' %}">Home</a>.</p>
+</div>
+</div>
+{% endblock content %}
