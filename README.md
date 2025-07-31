@@ -7,9 +7,9 @@ Every correct guess boosts your score. Every wrong guess resets the game.
 ---
 
 # 🎯Game Preview
- ![Home Page](gameProject\static\game_screenshots\Home_page.png)
- ![Gameplay Page](gameProject\static\game_screenshots\Score_Tracking.png)
- ![End-Game Page](gameProject\static\game_screenshots\End_game.png)
+ ![Home Page](gameProject/static/game_screenshots/Home_page.png)
+ ![Gameplay Page](gameProject/static/game_screenshots/Score_Tracking.png)
+ ![End-Game Page](gameProject/static/game_screenshots/End_game.png)
 
 ## 🚀 Features
 
